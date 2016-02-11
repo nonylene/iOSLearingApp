@@ -13,6 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var ratingControl: RatingControl!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,10 +32,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
             imagePickerController.sourceType = .PhotoLibrary
         imagePickerController.delegate = self
         presentViewController(imagePickerController, animated: true, completion: nil)
-    }
-
-    @IBAction func setLabelText(sender: AnyObject) {
-        firstLabel.text = nameTextField.text
     }
 
     func textFieldShouldReturn(textField: UITextField) -> Bool {
