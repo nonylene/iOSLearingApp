@@ -8,10 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate{
+class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
     @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var imageView: UIImageView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +23,14 @@ class ViewController: UIViewController, UITextFieldDelegate{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+
+    @IBAction func selectImage(sender: UITapGestureRecognizer) {
+        nameTextField.resignFirstResponder()
+        let imagePickerController = UIImagePickerController()
+            imagePickerController.sourceType = .PhotoLibrary
+        imagePickerController.delegate = self
+        presentViewController(imagePickerController, animated: true, completion: nil)
     }
 
     @IBAction func setLabelText(sender: AnyObject) {
@@ -35,5 +44,16 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
     func textFieldDidEndEditing(textField: UITextField) {
             firstLabel.text = textField.text
+    }
+
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let selectedImage = info[UIImagePickerControllerOriginalImage] as! UIImage
+        imageView.image = selectedImage
+        dismissViewControllerAnimated(true, completion: nil)
+
     }
 }
