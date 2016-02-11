@@ -8,7 +8,10 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate{
+
+    @IBOutlet weak var firstLabel: UILabel!
+    @IBOutlet weak var nameTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +23,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    @IBAction func setLabelText(sender: AnyObject) {
+        firstLabel.text = nameTextField.text
+    }
 }
-
