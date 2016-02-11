@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        nameTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -25,5 +26,14 @@ class ViewController: UIViewController, UITextFieldDelegate{
 
     @IBAction func setLabelText(sender: AnyObject) {
         firstLabel.text = nameTextField.text
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+
+    func textFieldDidEndEditing(textField: UITextField) {
+            firstLabel.text = textField.text
     }
 }
