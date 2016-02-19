@@ -16,7 +16,7 @@ class RatingControl: UIView {
         }
     }
 
-    var spacing = 5
+    var spacing = 0
     var stars = 5
     var raitingButtons = [UIButton]()
 
