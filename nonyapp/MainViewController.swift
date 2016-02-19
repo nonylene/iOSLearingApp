@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate{
 
-    @IBOutlet weak var firstLabel: UILabel!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
@@ -37,10 +36,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     func textFieldShouldReturn(textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
-    }
-
-    func textFieldDidEndEditing(textField: UITextField) {
-            firstLabel.text = textField.text
     }
 
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
