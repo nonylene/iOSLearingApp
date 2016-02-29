@@ -10,7 +10,7 @@ import UIKit
 
 class RatingControl: UIView {
 
-    var raiting = 0 {
+    var rating = 0 {
         didSet {
             setNeedsLayout()
         }
@@ -63,13 +63,13 @@ class RatingControl: UIView {
 
     func raitingButtonTapped(button: UIButton) {
         print("tapped!!!!")
-        raiting = raitingButtons.indexOf(button)! + 1
+        rating = raitingButtons.indexOf(button)! + 1
         updateButtonStatus()
     }
 
     func updateButtonStatus() {
         for (index, button ) in raitingButtons.enumerate() {
-            button.selected = index < raiting
+            button.selected = index < rating
         }
     }
 }
