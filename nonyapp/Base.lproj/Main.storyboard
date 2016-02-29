@@ -33,7 +33,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="2i5-C6-aGT" customClass="RatingControl" customModule="nonyapp" customModuleProvider="target">
-                                            <rect key="frame" x="97" y="37" width="240" height="44"/>
+                                            <rect key="frame" x="97" y="37" width="220" height="44"/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                     </subviews>
@@ -42,6 +42,7 @@
                                     <outlet property="nameLabel" destination="pmm-Rz-bZQ" id="1BZ-3v-CIJ"/>
                                     <outlet property="photoImageView" destination="OWq-SO-oPd" id="rwf-kW-EyL"/>
                                     <outlet property="raitingControl" destination="2i5-C6-aGT" id="9uK-Yg-kkt"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ShowDetail" id="cx8-tw-3iy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -60,7 +61,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bc6-Zc-vUV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="656" y="277"/>
+            <point key="canvasLocation" x="672" y="277"/>
         </scene>
         <!--New Item-->
         <scene sceneID="tne-QT-ifu">
@@ -93,8 +94,8 @@
                                             <outletCollection property="gestureRecognizers" destination="w7d-tG-ROa" appends="YES" id="drD-dQ-hmw"/>
                                         </connections>
                                     </imageView>
-                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="240" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="VFn-E9-qzt" customClass="RatingControl" customModule="nonyapp" customModuleProvider="target">
-                                        <rect key="frame" x="160" y="374" width="240" height="44"/>
+                                    <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="VFn-E9-qzt" customClass="RatingControl" customModule="nonyapp" customModuleProvider="target">
+                                        <rect key="frame" x="170" y="374" width="220" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
@@ -114,7 +115,7 @@
                     <navigationItem key="navigationItem" title="New Item" id="10g-TZ-Vsc">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="NKJ-S2-Rvx">
                             <connections>
-                                <action selector="cancel:" destination="BYZ-38-t0r" id="RQ1-6A-NSD"/>
+                                <action selector="cancel:" destination="BYZ-38-t0r" id="mHx-Iu-jcc"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="TIb-Lh-O5l">
@@ -175,10 +176,13 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OqS-eU-6sQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="277"/>
+            <point key="canvasLocation" x="1390" y="665"/>
         </scene>
     </scenes>
     <resources>
         <image name="defaultImage" width="230" height="230"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cx8-tw-3iy"/>
+    </inferredMetricsTieBreakers>
 </document>
