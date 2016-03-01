@@ -94,7 +94,7 @@
                                             <outletCollection property="gestureRecognizers" destination="w7d-tG-ROa" appends="YES" id="drD-dQ-hmw"/>
                                         </connections>
                                     </imageView>
-                                    <view contentMode="scaleToFill" misplaced="YES" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="VFn-E9-qzt" customClass="RatingControl" customModule="nonyapp" customModuleProvider="target">
+                                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="220" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="VFn-E9-qzt" customClass="RatingControl" customModule="nonyapp" customModuleProvider="target">
                                         <rect key="frame" x="170" y="374" width="220" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
